@@ -155,6 +155,7 @@ footer{background:var(--deep);color:#cfc6b1;padding:56px 0 26px;font-size:14.5px
 /* ===== Mobile ===== */
 @media(max-width:900px){
   .menu{display:none}
+  .menu.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:#fff;padding:18px 24px;border-bottom:1px solid var(--border);gap:16px}
   .hamburger{display:flex}
   .hero-grid{grid-template-columns:1fr;min-height:auto}
   .hero-copy{padding:44px 0 0;text-align:center}
