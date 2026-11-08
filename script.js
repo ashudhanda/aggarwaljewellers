@@ -17,6 +17,17 @@
     setOpen(!m.classList.contains('open'));
   });
 
+  // Tapping anywhere outside the open menu closes it, so a stray tap
+  // doesn't leave the overlay covering the page. Clicks on the toggle
+  // itself and inside the menu are excluded: the toggle has its own
+  // handler above, and menu links close the menu via the handler below.
+  document.addEventListener('click', function (e) {
+    if (m.classList.contains('open') &&
+        !e.target.closest('.menu') && !e.target.closest('.hamburger')) {
+      setOpen(false);
+    }
+  });
+
   // Close the menu once a destination is chosen, so the user lands on the
   // section instead of staring at an open overlay.
   m.addEventListener('click', function (e) {
