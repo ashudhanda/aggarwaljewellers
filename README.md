@@ -20,8 +20,17 @@ jewellery with showrooms in Sector 20, Panchkula and The Mall, Solan.
 | --- | --- |
 | `index.html` | All page content and structure |
 | `style.css` | All styling, including the mobile layout and reduced-motion rules |
-| `script.js` | Mobile menu toggle (class-based, closes on link click and Escape) |
+| `script.js` | Mobile menu toggle (class-based, closes on link click, Escape and tapping outside the menu) |
 | `*.png` | Hero, category, product and showroom images |
+
+## Accessibility
+
+- Skip link ("Skip to main content") jumps to the `<main>` landmark
+- Main navigation is labelled; decorative glyphs (✨, ✓) are hidden from
+  screen readers
+- Hero image is prioritised with `fetchpriority="high"`; all other images
+  are lazy-loaded
+- Reduced-motion rules switch off smooth scrolling and hover animations
 
 ## Run it locally
 
