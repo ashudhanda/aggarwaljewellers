@@ -26,8 +26,11 @@ jewellery with showrooms in Sector 20, Panchkula and The Mall, Solan.
 ## Accessibility
 
 - Skip link ("Skip to main content") jumps to the `<main>` landmark
-- Main navigation is labelled; decorative glyphs (✨, ✓) are hidden from
-  screen readers
+- Main navigation is labelled; the trust strip is a labelled section
+- Decorative glyphs (✨, ✓, ▶, ☎) are hidden from screen readers
+- Footer social links are labelled Instagram and WhatsApp (not "IG"/"WA")
+- Keyboard focus is always visible (gold outline); the mobile menu button
+  announces "Close menu" while the menu is open
 - Hero image is prioritised with `fetchpriority="high"`; all other images
   are lazy-loaded
 - Reduced-motion rules switch off smooth scrolling and hover animations
