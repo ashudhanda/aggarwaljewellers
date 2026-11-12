@@ -14,6 +14,9 @@ a{color:inherit;text-decoration:none}
 /* ===== Skip link ===== */
 .skip-link{position:absolute;left:16px;top:-48px;z-index:100;background:var(--deep);color:#f4ecd9;padding:10px 16px;border-radius:8px;font-weight:600;transition:top .15s}
 .skip-link:focus{top:12px}
+/* Keyboard focus is always visible: a gold outline on any focused element,
+   so keyboard users can tell where they are on the page. */
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
 .gold{color:var(--gold)}
 .eyebrow{font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
 
