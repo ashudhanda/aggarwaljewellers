@@ -1,12 +1,12 @@
 :root{
-  --ink:#2C2C2B; --muted:#7D7A75; --canvas:#FFFFFF; --soft:#F9F8F7; --surface:#F0EFED;
+  --ink:#2C2C2B; --muted:#7D7A75; --canvas:#FFFFFF; --soft:#F9F8F7;
   --border:#E6E5E3; --gold:#B8860B; --gold-soft:#F6EEDD; --gold-line:#E4D3A8; --deep:#1c1712;
   --maxw:1120px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--canvas);font-size:16px;line-height:1.5}
-h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
@@ -70,7 +70,7 @@ section{padding:78px 0}
 /* ===== Categories ===== */
 .cats{background:var(--soft)}
 .cat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.cat{position:relative;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);aspect-ratio:1/1;cursor:pointer}
+.cat{position:relative;border-radius:14px;overflow:hidden;background:#fff;border:1px solid var(--border);aspect-ratio:1/1}
 .cat img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
 .cat:hover img{transform:scale(1.06)}
 .cat-label{position:absolute;inset:auto 0 0 0;background:linear-gradient(to top,rgba(20,16,10,.78),transparent);color:#fff;padding:36px 20px 18px;font-family:Georgia,serif;font-size:20px}
