@@ -12,6 +12,9 @@
   function setOpen(open) {
     m.classList.toggle('open', open);
     btn.setAttribute('aria-expanded', String(open));
+    // The label names the action the button will do next, so a screen
+    // reader user hears "Close menu" while the menu is open, not "Menu".
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Menu');
   }
 
   btn.addEventListener('click', function () {
