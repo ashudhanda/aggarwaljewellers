@@ -4,8 +4,9 @@
 // query), so inline styles can never leak onto the desktop layout when the
 // viewport is resized while the menu is open.
 (function () {
-  var btn = document.querySelector('.hamburger');
-  var m = document.querySelector('.menu');
+  'use strict';
+  const btn = document.querySelector('.hamburger');
+  const m = document.querySelector('.menu');
   if (!btn || !m) return;
 
   function setOpen(open) {
