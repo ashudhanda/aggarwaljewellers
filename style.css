@@ -7,7 +7,11 @@
 html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--canvas);font-size:16px;line-height:1.5}
 h1,h2,h3{font-family:Georgia,"Times New Roman",serif}
-img{display:block;max-width:100%}
+/* height:auto lets the width/height attributes on <img> keep the real
+   aspect ratio wherever no rule below sets an explicit height, so a
+   width-constrained image is never squashed. Rules that set height:100%
+   with object-fit:cover still win where they apply. */
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 .container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
 
