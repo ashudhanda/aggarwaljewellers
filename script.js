@@ -45,4 +45,18 @@
       btn.focus();
     }
   });
+
+  // If the viewport grows past the mobile breakpoint (900px, see the
+  // media query in style.css) while the menu is open, close it: the
+  // desktop layout shows the menu inline, and a stale `.open` class
+  // would leave aria-expanded="true" on a button that is now hidden.
+  // The addListener branch is the Safari < 14 spelling of the same API.
+  if (typeof window !== 'undefined' && window.matchMedia) {
+    var mq = window.matchMedia('(min-width: 901px)');
+    var onViewportChange = function (e) {
+      if (e.matches && m.classList.contains('open')) setOpen(false);
+    };
+    if (mq.addEventListener) mq.addEventListener('change', onViewportChange);
+    else if (mq.addListener) mq.addListener(onViewportChange);
+  }
 })();
