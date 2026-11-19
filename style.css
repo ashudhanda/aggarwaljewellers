@@ -65,6 +65,9 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .trust-item .d{font-size:12.5px;color:#c8bfa8;letter-spacing:.03em}
 
 /* ===== Section base ===== */
+/* Anchored sections clear the 76px sticky header (plus a little air),
+   so a nav jump never parks the section heading underneath it. */
+section[id]{scroll-margin-top:92px}
 section{padding:78px 0}
 .sec-head{text-align:center;max-width:620px;margin:0 auto 46px}
 .sec-head h2{font-size:36px;letter-spacing:-.01em}
