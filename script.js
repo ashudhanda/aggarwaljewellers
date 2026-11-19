@@ -46,6 +46,24 @@
     }
   });
 
+  // Keep keyboard focus inside the open menu: Tab from the last menu link
+  // wraps back to the toggle, and Shift+Tab from the toggle wraps to the
+  // last link, so focus never lands on page content hidden behind the
+  // open overlay. Only active while the menu is open.
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Tab' || !m.classList.contains('open')) return;
+    var focusables = [btn].concat(Array.prototype.slice.call(m.querySelectorAll('a')));
+    var first = focusables[0];
+    var last = focusables[focusables.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  });
+
   // If the viewport grows past the mobile breakpoint (900px, see the
   // media query in style.css) while the menu is open, close it: the
   // desktop layout shows the menu inline, and a stale `.open` class
