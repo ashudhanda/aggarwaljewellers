@@ -36,6 +36,13 @@ Live site: <https://ashudhanda.github.io/aggarwaljewellers/>
 - Hero image is prioritised with `fetchpriority="high"`; all other images
   are lazy-loaded
 - Reduced-motion rules switch off smooth scrolling and hover animations
+- Anchored sections clear the 76px sticky header (`scroll-margin-top: 92px`)
+- The mobile menu traps Tab focus while open and works without JavaScript
+  (a `<noscript>` rule shows it as a static list); the header WhatsApp
+  button is hidden below 900px so the header fits narrow phones, with the
+  floating WhatsApp button covering it instead
+- Structured data (`JewelryStore` JSON-LD) lists both showrooms, opening
+  hours (Tue–Sun 10:30–20:00) and a price range
 
 ## Run it locally
 
