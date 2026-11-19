@@ -42,6 +42,10 @@
 }
 </script>
 <link rel="stylesheet" href="style.css" />
+<!-- Without JavaScript the mobile menu can never open (it is display:none
+     until script.js adds .open), so show it as a static list under the
+     header instead and hide the dead toggle button. -->
+<noscript><style>@media(max-width:900px){.menu{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:#fff;padding:18px 24px;border-bottom:1px solid var(--border);gap:16px}.hamburger{display:none}}</style></noscript>
 </head>
 <body>
 
