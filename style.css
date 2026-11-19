@@ -170,6 +170,10 @@ footer{background:var(--deep);color:#cfc6b1;padding:56px 0 26px;font-size:14.5px
 
 /* ===== Mobile ===== */
 @media(max-width:900px){
+  /* The header CTA is dropped on mobile: brand + CTA + hamburger need
+     ~390px even at Georgia's narrower widths, so phones under ~430px
+     overflowed. WhatsApp stays one tap away via the floating button. */
+  .nav-cta{display:none}
   .menu{display:none}
   .menu.open{display:flex;position:absolute;top:76px;left:0;right:0;flex-direction:column;background:#fff;padding:18px 24px;border-bottom:1px solid var(--border);gap:16px}
   .hamburger{display:flex}
