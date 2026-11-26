@@ -29,7 +29,7 @@ Live site: <https://ashudhanda.github.io/aggarwaljewellers/>
 
 - Skip link ("Skip to main content") jumps to the `<main>` landmark
 - Main navigation is labelled; the trust strip is a labelled section
-- Decorative glyphs (✨, ✓, ▶, ☎) are hidden from screen readers
+- Decorative glyphs (✨, ✓, ▶, ☎, •) are hidden from screen readers
 - Footer social links are labelled Instagram and WhatsApp (not "IG"/"WA")
 - Keyboard focus is always visible (gold outline); the mobile menu button
   announces "Close menu" while the menu is open
